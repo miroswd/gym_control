@@ -1,14 +1,11 @@
 const express = require('express');
 
+const routes = require('./routes')
+
 const server = express()
 
 
-
-server.get('/',function(req,res){
-  return res.send('Bom dia')
-})
-
-
+server.use(routes) // Permite o servidor usar as rotas
 
 // Listening
 server.listen(3333,function(){
