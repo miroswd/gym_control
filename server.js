@@ -7,6 +7,10 @@ const routes = require('./routes');
 // Middlewares --> Tudo q está no meio do caminho, entre o ponto A e B
 const server = express()
 
+// Configurando express para ler o req.body
+server.use(express.urlencoded({extended:true}))
+
+
 server.use(express.static('./public'))
 
 
