@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap');
+
+:root{
+  --rocketseat: #7159c1;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border:none;
+}
+
+body {
+  background-color:var(--rocketseat);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  padding: 32px; /* Não respeita o limite da largura ↓ */
+  box-sizing: border-box; /* Leva o conteúdo até o limite da largura do conteúdo */
+  
+  background-color: #fff;
+  
+  text-align: center;
+}
+
+.links {
+  font-size: 20px;
+}
+
+
+.links a + a {
+  /* Pegando o <a> precendente, posterior ao outro <a>
+   * Como o primeiro <a>, não é posterior de outro,
+     esse estilo não se aplica  
+  */
+  margin-left: 32px;
+  text-decoration: none;
+}
+
+.links a {
+  text-decoration: none;
+  color: #777;
+  position:relative;
+}
+
+.links a.active {
+  font-weight: 700; 
+  color:var(--rocketseat);
+}
+
+.links a:hover{
+/* Mouse over - mouse em cima */
+  color: var(--rocketseat);
+}
+
+.links a::after{
+  content:""; /* Sempre precisa do content, mesmo q seja vazio */
+  
+  width: 0;
+  height: 2px;
+
+  background-color: var(--rocketseat);
+  
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+}
+
+
+/* Pseudo Elements - criar elementos*/
+.links a:hover::after {
+  width: 100%;
+  /* -=- TRANSITION -=- */
+  transition: width 700ms ease-in-out /*1s*/ ;
+        /** type, duration, easing, delay
+         * Transição em todos os tipos, largura, altura 
+         * Duração
+         * Suavização da animação
+           -> Para verificar no DevTools:
+              - Selecionar o <a>
+              - Clicar na opção :hov, em styles
+              - Ticar o hover
+              - Clicar de novo em :hov, para esconder a caixa
+              - Selecionar o ::after
+              - Clicar no ícone do cubic bezier
+         * Delay para começar a animação
+        */
+}
