@@ -1,0 +1,5 @@
+>>> npm init -y
+>>> npm i -D nodemon # package.json - modify the start
+>>> npm i express # or npm install express
+>>> npm i nunjucks # template engine
+>>> npm i browser-sync npm-run-all -D # automatically reload
