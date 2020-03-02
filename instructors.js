@@ -16,20 +16,35 @@ exports.post = function(req,res){
         return res.send('Please fill in all fields')
       }
     }
+    
+   // Desestruturando
+    
+   let {avatar_url, birth, name, services, genre} = req.body
 
-    req.body.birth = Date.parse(req.body.birth) // Transformando em time stamps
-    req.body.created_at = Date.now() // Criando a data de cadastro
+   birth = Date.parse(birth) // Transformando em time stamps
+   const created_at = Date.now() // Criando a data de cadastro
+   const id = Number(data.instructors.length + 1)
 
-    data.instructors.push(req.body)
+    data.instructors.push({
+      id,
+      avatar_url,
+      name,
+      birth,
+      genre,
+      services,
+      created_at
+    })
                                                 // Pulando um campo, formatação        
-    fs.writeFile('data.json', JSON.stringify(data,null,2), function(err){
+    fs.writeFile('data.json', JSON.stringify(data,null,2),function(err){
         // Calback Function -> Função executada depois de alguma coisa, impede o bloqueio da aplicação   
-        if (err) return res.send("Write file error")
+        if (err) {
+          return res.send("Write file error")
+        }
 
         return res.redirect('/instructors')
-    }) // Escrever o arquivo 
+      }) // Escrever o arquivo 
 
-    // return res.send(req.body)
+    //  return res.send(req.body)
 } 
 
 // Update
