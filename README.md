@@ -1,4 +1,4 @@
-<h3>Gym Control</h3>
+<h1>Gym Control</h1>
 <p>Controle de academia - LaunchBase</p>
 
 <h6>Utilização de:</h6>
