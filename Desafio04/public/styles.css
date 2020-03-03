@@ -117,7 +117,7 @@ header {
   text-transform: uppercase;
 }
 
-.details .item div span{
+.details .item span{
   padding: 7px;
   margin-top: 10px;
   margin-right: 5px;
@@ -142,4 +142,72 @@ header {
   to {
     opacity: 1;
   }
+}
+
+
+/* INPUTS */
+
+input {
+  margin-top: 5px;
+  
+  width: 100%;
+  outline: none;
+
+
+  color:#555;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input[type="radio"]{
+  width:initial;
+  margin-right: 4px;
+}
+
+input::placeholder{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+select {
+  outline: none;
+
+  padding: 5px;
+
+  border-radius: 4px;
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  background-color: var(--rosita);
+  
+}
+
+option:checked{
+  background-color: #181818;
+}
+
+
+select option {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+button[type="submit"]{
+  width: 100%;
+  padding: 10px;
+  
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+
+  background-color: var(--rosita);
+  border-radius: 4px;
+}
+
+button[type="submit"]:hover{
+  cursor: pointer;
+  background-color: rgb(202, 6, 104);
 }
