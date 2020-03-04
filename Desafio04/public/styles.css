@@ -184,10 +184,6 @@ select {
   
 }
 
-option:checked{
-  background-color: #181818;
-}
-
 
 select option {
   font-weight: bold;
