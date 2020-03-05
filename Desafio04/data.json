@@ -1,34 +1,3 @@
 {
-  "teachers": [
-    {
-      "id": null,
-      "avatar_url": "",
-      "name": "",
-      "birth": null,
-      "education": "0",
-      "learning": "P",
-      "segment": "",
-      "created_at": 1583350446902
-    },
-    {
-      "id": null,
-      "avatar_url": "https://www.google.com",
-      "name": "Teste",
-      "birth": 918777600000,
-      "education": "3",
-      "learning": "P",
-      "segment": "ALOAK",
-      "created_at": 1583350559783
-    },
-    {
-      "id": null,
-      "avatar_url": "https://google.com",
-      "name": "Full Name",
-      "birth": 915148800000,
-      "education": "2",
-      "learning": "R",
-      "segment": "Sei lá",
-      "created_at": 1583351538661
-    }
-  ]
+  "teachers": []
 }

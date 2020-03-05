@@ -1,5 +1,36 @@
 const fs = require('fs') // Module do node -> FileSystem
 const data = require('./data.json')
+
+// Show
+exports.show = function(req,res){
+  // req.query.id  -> ?id= 
+  // req.body      -> Pega do formulário
+  // req.params.id -> /:id
+  
+  const {id} = req.params
+
+  const foundInstructor = data.instructors.find(function(instructor){
+    return instructor.id == id // Se o instrutor.id for igual ao :id
+
+  })
+  console.log(foundInstructor)
+  if(!foundInstructor) return res.send("Instructor not found")
+
+
+  const instructor = {
+    ...foundInstructor, // Spread, espalhando o resto das informações
+    // Correções 
+    age:"",
+    services:foundInstructor.services.split(","), // No show.njk, é esperado um array, e no json tem uma string - precisa converter essa string para array
+        // Split -> separa em posições do array, identificados pelo separador
+    created_at:""
+  }
+
+
+  return res.render("instructors/show", {instructor}) // Renderizando a página e mandando o instrutor referente ao id
+}
+
+
 // Create
 exports.post = function(req,res){
     // Tornando todos os campos obrigatórios

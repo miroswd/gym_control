@@ -15,8 +15,8 @@ exports.post = function(req,res) {
   let {avatar_url, name, birth, education, learning, segment} = req.body;
 
   birth = Date.parse(birth)
-
-  const id = Number(data.teachers.lenght + 1)
+  
+  const id = Number(data.teachers.length + 1)
   const created_at = Date.now()
 
   data.teachers.push({

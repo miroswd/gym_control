@@ -1,3 +1,22 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://google.com",
+      "name": "Mario Bros",
+      "birth": 977356800000,
+      "genre": "M",
+      "services": "Nintendo, Games",
+      "created_at": 1583412193826
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://github.com",
+      "name": "Leia Organa",
+      "birth": 977356800000,
+      "genre": "F",
+      "services": "Star Wars, Ficção",
+      "created_at": 1583412276709
+    }
+  ]
 }
