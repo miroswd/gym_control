@@ -1,5 +1,6 @@
 const fs = require('fs') // Module do node -> FileSystem
 const data = require('./data.json')
+const {age} = require('./utils')
 
 // Show
 exports.show = function(req,res){
@@ -20,10 +21,10 @@ exports.show = function(req,res){
   const instructor = {
     ...foundInstructor, // Spread, espalhando o resto das informações
     // Correções 
-    age:"",
+    birth:age(foundInstructor.birth),
     services:foundInstructor.services.split(","), // No show.njk, é esperado um array, e no json tem uma string - precisa converter essa string para array
         // Split -> separa em posições do array, identificados pelo separador
-    created_at:""
+    created_at:new Intl.DateTimeFormat('pt-BR').format(foundInstructor.created_at)
   }
 
 
