@@ -14,7 +14,6 @@ exports.show = function(req,res){
     return instructor.id == id // Se o instrutor.id for igual ao :id
 
   })
-  console.log(foundInstructor)
   if(!foundInstructor) return res.send("Instructor not found")
 
 
@@ -43,7 +42,6 @@ exports.post = function(req,res){
     // }
   
     for (key of keys) {
-      console.log(req.body[key])
       if (req.body[key] == ''){
         return res.send('Please fill in all fields')
       }
