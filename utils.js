@@ -12,7 +12,6 @@ module.exports = {
     const month = today.getMonth() - birthDate.getMonth();
   
     // Só faço aniverário, quando atingir a data correta
-    console.log(birthDate.getDate())
     if (month < 0 || month == 0 && today.getDate() <= birthDate.getDate()){
         age = age - 1
     }
