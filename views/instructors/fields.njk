@@ -6,6 +6,7 @@
             type="url"
             name="avatar_url"
             placeholder="http://"
+            value="{{instructor.avatar_url}}"
           >
         </div>
       </div>
@@ -17,6 +18,7 @@
             type="text"
             name="name"
             placeholder="Instructor Name"
+            value="{{instructor.name}}"
           >
         </div>
       </div>
@@ -27,6 +29,7 @@
           <input 
             type="date"
             name="birth"
+            value="{{instructor.birth}}"
           >
         </div>
       </div>
@@ -34,8 +37,24 @@
       <div class="item">
         <div>Genre</div>
         <div>
-          <span><input type="radio" name="genre" value="M" checked>Male</span>
-          <span><input type="radio" name="genre" value="F">Female</span>
+          <span>
+            <input 
+              type="radio" 
+              name="genre"
+              value="M" 
+              {% if instructor.genre == 'M' %}
+                checked
+              {% endif %}>Male</span>
+          
+          <span>
+            <input 
+              type="radio"
+              name="genre" 
+              value="F"
+              {% if instructor.genre == "F" %}
+                checked
+              {% endif %}
+          >Female</span>
         </div>
       </div>
 
@@ -46,6 +65,7 @@
             type="text"
             name="services"
             placeholder="Enter the services provided, separating with commas"
+            value="{{instructor.services}}"
           >
         </div>
       </div>

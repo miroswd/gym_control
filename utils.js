@@ -17,5 +17,26 @@ module.exports = {
     }
   
     return age
+  },
+  date: function(timestamp){
+    // O html espera uma data no formato yyyy-mm-dd
+    const date = new Date(timestamp)
+
+    // UTC -> Universal
+    // yyyy
+    const year = date.getUTCFullYear();
+
+
+    // mm
+    const month = `0${date.getUTCMonth() + 1}`.slice(-2); // 0 é janeiro, por isso acrescentar 1
+    
+    // dd
+    const day = `0${date.getUTCDate()}`.slice(-2);
+
+    // slice -> método para cortar/fatiar
+
+
+    // return yyyy-mm-dd
+    return `${year}-${month}-${day}` 
   }
 }
