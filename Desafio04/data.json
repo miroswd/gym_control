@@ -1,3 +1,24 @@
 {
-  "teachers": []
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "https://google.com",
+      "name": "Miroswd",
+      "birth": 949449600000,
+      "education": "0",
+      "learning": "P",
+      "segment": "nome",
+      "created_at": 1584139464444
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://github.com",
+      "name": "Fabricio",
+      "birth": 949449600000,
+      "education": "0",
+      "learning": "P",
+      "segment": "None",
+      "created_at": 1584140697939
+    }
+  ]
 }

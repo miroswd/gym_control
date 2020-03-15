@@ -39,3 +39,19 @@ exports.post = function(req,res) {
   })
 
 }
+
+// Show
+
+exports.show = function(req,res){
+
+    const {id} = req.params
+    const foundTeacher = data.teachers.find(function(teacher){
+      return id == teacher.id;
+    })
+
+    if(!foundTeacher) return res.send("Teacher is not found")
+    // const {avatar_url,name,birth,education,learning,segment,created_at} = data[id]
+    console.log(data)
+
+    return res.render('teachers/show')
+  }

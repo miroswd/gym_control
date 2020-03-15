@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <form class="card" method="POST" action="/teachers">
+    <section 
+      class="avatar"
+      style="background:url(https://source.unsplash.com/collection/190728/800x800) no-repeat center center / cover"></section>
+
+    <section class="details">
+      <h3>Details</h3>
+      
+      <div class="info">
+        <div class="item">
+          <div>Avatar URL</div>
+          <input type="url" name="avatar_url" placeholder="https://">
+        </div>
+
+        <div class="item">
+          <div>Teacher's Name</div>
+          <input type="text" name="name" placeholder="Full Name">
+        </div>
+
+        <div class="item">
+          <div>Date of Birth</div>
+          <input type="date" name="birth">
+        </div>
+
+        <div class="item">
+          <div>Education Level</div>
+          <select name="education">
+            <option value="0">Complete High School</option>
+            <option value="1">Complete Higher School</option>
+            <option value="2">Masters Degree</option>
+            <option value="3">Doctorate Degree</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <div>Class Type</div>
+          <div>
+            <span><input type="radio" name="learning" value="P" checked>Presential</span>
+            <span><input type="radio" name="learning" value="R">Remotely</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>Follow-up</div>
+          <div class="label">
+            <input type="text" name="segment" placeholder="Enter the segments, separating with commas">
+          </div>
+        </div>
+        
+        <button type="submit">Save</button>
+
+    </section>
+  </form>
+{% endblock content %}
