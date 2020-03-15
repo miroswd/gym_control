@@ -1,0 +1,47 @@
+<section class="details">
+      <h3>Details</h3>
+      
+      <div class="info">
+        <div class="item">
+          <div>Avatar URL</div>
+          <input type="url" name="avatar_url" placeholder="https://" value="{{teacher.avatar_url}}">
+        </div>
+
+        <div class="item">
+          <div>Teacher's Name</div>
+          <input type="text" name="name" placeholder="Full Name" value="{{teacher.name}}">
+        </div>
+
+        <div class="item">
+          <div>Date of Birth</div>
+          <input type="date" name="birth" value="{{teacher.birth}}">
+        </div>
+
+        <div class="item">
+          <div>Education Level</div>
+          <select name="education">
+            <option value="0" {% if teacher.education == "0" %} selected {% endif %} selected>Complete High School</option>
+            <option value="1" {% if teacher.education == "1" %} selected {% endif %}>Complete Higher School</option>
+            <option value="2" {% if teacher.education == "2" %} selected {% endif %}}>Masters Degree</option>
+            <option value="3" {% if teacher.education == "3" %} selected {% endif %}}>Doctorate Degree</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <div>Class Type</div>
+          <div>
+            <span><input type="radio" name="learning" value="P" {% if teacher.learning == "P" %} checked {% endif %} checked>Presential</span>
+            <span><input type="radio" name="learning" value="R" {% if teacher.learning == "R" %} checked {% endif %}>Remotely</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>Follow-up</div>
+          <div class="label">
+            <input type="text" name="segment" placeholder="Enter the segments, separating with commas" value="{{teacher.segment}}">
+          </div>
+        </div>
+        
+        <button type="submit">Save</button>
+
+    </section>
