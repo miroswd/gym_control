@@ -10,6 +10,8 @@ routes.get('/', function(req,res){
 
 // === Teachers === //
 
+// GET
+
 routes.get('/teachers', function(req,res){
   return res.render('teachers/index')
 })
@@ -18,11 +20,18 @@ routes.get('/teachers/create', function(req,res){
   return res.render('teachers/create')
 })
 
-routes.get('/teachers/:id/show', teachers.show)
+routes.get('/teachers/:id', teachers.show)
 
 // POST
 
 routes.post('/teachers', teachers.post)
+
+// UPDATE
+
+routes.get('/teachers/:id/edit', teachers.edit)
+
+
+
 
 
 // === Students === //

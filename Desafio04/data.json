@@ -1,24 +1,24 @@
 {
   "teachers": [
     {
-      "id": 1,
-      "avatar_url": "https://google.com",
-      "name": "Miroswd",
-      "birth": 949449600000,
-      "education": "0",
+      "avatar_url": "https://1.bp.blogspot.com/-9eJzom5Sjco/UurJO1DjA1I/AAAAAAAAApc/ajF7eCy-hUc/s1600/mb.jpg",
+      "name": "Mario Games",
+      "birth": "1976-02-24",
+      "education": "1",
       "learning": "P",
-      "segment": "nome",
-      "created_at": 1584139464444
+      "segment": "Pegadinha, Mario, Nintendo, Meme",
+      "id": 1,
+      "created_at": 1584304732713
     },
     {
-      "id": 2,
-      "avatar_url": "https://github.com",
-      "name": "Fabricio",
-      "birth": 949449600000,
-      "education": "0",
+      "avatar_url": "https://1.bp.blogspot.com/-9eJzom5Sjco/UurJO1DjA1I/AAAAAAAAApc/ajF7eCy-hUc/s1600/mb.jpg",
+      "name": "Mario Games",
+      "birth": "1976-02-24",
+      "education": "2",
       "learning": "P",
-      "segment": "None",
-      "created_at": 1584140697939
+      "segment": "Pegadinha, Mario, Nintendo, Meme",
+      "id": 2,
+      "created_at": 1584304789440
     }
   ]
 }
