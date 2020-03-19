@@ -248,3 +248,9 @@ a.button {
   text-align: center;
   text-decoration: none;
 }
+
+/* Delete */
+#form-delete button[type="submit"] {
+  margin-top: 12px;
+  background-color: #c03f3f;
+}

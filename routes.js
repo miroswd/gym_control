@@ -23,8 +23,13 @@ routes.get('/instructors/:id', instructors.show)
 routes.get('/instructors/:id/edit', instructors.edit);
 
 // Post
-
 routes.post('/instructors', instructors.post)
+
+// PUT
+routes.put('/instructors', instructors.put)
+
+// Delete
+routes.delete('/instructors', instructors.delete)
 
 // Members
 routes.get('/members',function(req,res){

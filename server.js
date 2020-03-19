@@ -1,5 +1,6 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const methodOverride = require('method-override');
 
 const routes = require('./routes');
 
@@ -9,10 +10,10 @@ const server = express()
 
 // Configurando express para ler o req.body
 server.use(express.urlencoded({extended:true}))
-
-
 server.use(express.static('./public'))
-
+server.use(methodOverride('_method')) // sobrescreve o método
+                                  // acessando o edit.nkj, chamando o parametro _method
+server.use(routes) // Permite o servidor usar as rotas, manda para a rota correta
 
 server.set('view engine','njk');
 
@@ -21,7 +22,6 @@ nunjucks.configure('views',{
   noCache: true
 })
 
-server.use(routes) // Permite o servidor usar as rotas
 
 
 // "PONTO B"
