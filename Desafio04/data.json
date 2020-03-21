@@ -1,24 +1,34 @@
 {
   "teachers": [
     {
-      "avatar_url": "https://1.bp.blogspot.com/-9eJzom5Sjco/UurJO1DjA1I/AAAAAAAAApc/ajF7eCy-hUc/s1600/mb.jpg",
-      "name": "Mario Games",
-      "birth": "1976-02-24",
-      "education": "1",
-      "learning": "P",
-      "segment": "Pegadinha, Mario, Nintendo, Meme",
-      "id": 1,
-      "created_at": 1584304732713
+      "avatar_url": "https://media1.tenor.com/images/b192da4be60ba55238f2be49d077c4d0/tenor.gif?itemid=11933023",
+      "name": "Cirinho Gominhos",
+      "birth": "1600-12-12",
+      "education": "2",
+      "learning": "R",
+      "segment": "Direito, Advocacia",
+      "id": 2,
+      "created_at": 1584751332601
     },
     {
-      "avatar_url": "https://1.bp.blogspot.com/-9eJzom5Sjco/UurJO1DjA1I/AAAAAAAAApc/ajF7eCy-hUc/s1600/mb.jpg",
-      "name": "Mario Games",
-      "birth": "1976-02-24",
-      "education": "2",
+      "avatar_url": "https://i.ytimg.com/vi/qXnwCt-VmjM/mqdefault.jpg",
+      "name": "Erick Jacquin",
+      "birth": -411177600000,
+      "education": "3",
       "learning": "P",
-      "segment": "Pegadinha, Mario, Nintendo, Meme",
-      "id": 2,
-      "created_at": 1584304789440
+      "segment": "MasterChef, Cozinha, Francesa",
+      "id": "3",
+      "created_at": 1584751687434
+    },
+    {
+      "avatar_url": "https://i.ytimg.com/vi/qXnwCt-VmjM/mqdefault.jpg",
+      "name": "Erick Jacquin",
+      "birth": "1967-12-21",
+      "education": "3",
+      "learning": "R",
+      "segment": "MasterChef, Cozinha Francesa",
+      "id": 3,
+      "created_at": 1584751825428
     }
   ]
 }
