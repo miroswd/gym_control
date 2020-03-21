@@ -27,12 +27,13 @@ routes.get('/teachers/:id', teachers.show)
 routes.post('/teachers', teachers.post)
 
 // UPDATE
-
 routes.get('/teachers/:id/edit', teachers.edit)
 
+routes.put('/teachers/:id',teachers.update)
 
+// DELETE
 
-
+routes.delete('/teachers/:id',teachers.delete)
 
 // === Students === //
 

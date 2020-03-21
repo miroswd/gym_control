@@ -11,7 +11,7 @@ exports.show = function(req,res){
   const {id} = req.params
 
   const foundInstructor = data.instructors.find(function(instructor){
-    return instructor.id == id // Se o instrutor.id for igual ao :id
+    return id == instructor.id // Se o instrutor.id for igual ao :id
 
   })
   if(!foundInstructor) return res.send("Instructor not found")
@@ -71,20 +71,20 @@ exports.post = function(req,res){
           return res.send("Write file error")
         }
 
-        return res.redirect('/instructors')
+        return res.redirect(`/instructors/${id}`)
       }) // Escrever o arquivo 
 
     //  return res.send(req.body)
 } 
 
-// Update
+// Edit - página para editar
 exports.edit = function(req,res){
   const {id} = req.params;
   const foundInstructor = data.instructors.find(function(instructor){
       return id == instructor.id;
   })
 
-  if(!foundInstructor) return res.send("Instructor not found")
+  if(!foundInstructor) return res.send("Instructor nota found")
 
   const instructor = {
     ...foundInstructor,
@@ -92,4 +92,51 @@ exports.edit = function(req,res){
   }
 
   return res.render('instructors/edit',{instructor})
+}
+
+// Put - salvar o edit no backend 
+exports.put = function(req,res){
+  const {id} = req.body
+  let index = 0
+
+  const foundInstructor = data.instructors.find(function(instructor, foundIndex){
+    if (id == instructor.id) {
+      index = foundIndex
+      return true
+    }
+  })
+
+  if (!foundInstructor) return res.send("Instructor nots found")
+
+  const instructor = {
+    ...foundInstructor,
+    ...req.body,
+    birth: Date.parse(req.body.birth)
+  }
+  data.instructors[index] = instructor
+  fs.writeFile("data.json", JSON.stringify(data,null,2), function(err){
+    if(err) return res.send("Write error!")
+
+    return res.redirect(`/instructors/${id}`)
+  })
+}
+
+// Delete
+exports.delete = function(req,res){
+  const {id} = req.body
+
+  // Filtra - estrutura de repetição
+  // pra cada instrutor, roda a função, precisa retornar um boolean
+  // tudo q for true, coloca dentro do array filteredInstructors
+  const filteredInstructors = data.instructors.filter(function(instructor){
+    return instructor.id != id // se for falso, tira do array
+  })
+
+  data.instructors = filteredInstructors
+
+  fs.writeFile("data.json", JSON.stringify(data,null,2), function(err){
+    if(err) return res.send("write file error!")
+
+    return res.redirect('/instructors')
+  })
 }
